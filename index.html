@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Markdown Editor</title>
+    <title>Markdown Online</title>
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="stylesheet" href="lib/material-icons.css">
     <link rel="stylesheet" href="lib/base16-light.css">
@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="index.css">
   </head>
   <body id="toplevel">
-    <div id="in"><form><textarea id="code"># New Document</textarea></form></div>
+    <div id="in"><form><textarea id="code"># 流沙团队在线 Markdown</textarea></form></div>
     <div id="out" class="markdown-body"></div>
     <div id="menu">
       <span>Save As</span>
@@ -38,17 +38,17 @@
     </div>
     <div id="navbar">
       <div id="navcontent">
-        <a id="logo" href = "https://github.com/jbt/markdown-editor" tooltip = "Check out the code on Github!">
-          <p id="title" class="left"># Markdown Editor</p>
+        <a id="logo" href = "http://book.bornforthi.com/markdown-editor/" tooltip = "Check out the code on Github!">
+          <p id="title" class="left">Markdown Online</p>
         </a>
-        <p id="openbutton" title="Open from Disk" class="navbutton left" onclick="document.getElementById('fileInput').click();"><i class="material-icons">open_in_browser</i></p>
+        <p id="openbutton" title="上传你的 Markdown 文档" class="navbutton left" onclick="document.getElementById('fileInput').click();"><i class="material-icons">open_in_browser</i></p>
         <input id="fileInput" type="file" class="hidden" accept=".md,.mdown,.txt,.markdown"/>
         <p id="savebutton" title="Download" class="navbutton left" onclick="showMenu()"><i class="material-icons">file_download</i></p>
-        <p id="browsersavebutton" title="Browser Save (Experimental)" class="navbutton left" onclick="saveInBrowser()"><i class="material-icons">save</i></p>
-        <p id="sharebutton" title="Generate Shareable Link" class="navbutton left" onclick="updateHash()"><i class="material-icons">share</i></p>
+        <p id="browsersavebutton" title="保存 MD" class="navbutton left" onclick="saveInBrowser()"><i class="material-icons">save</i></p>
+        <p id="sharebutton" title="创建分享连接" class="navbutton left" onclick="updateHash()"><i class="material-icons">share</i></p>
         <p id="nightbutton" title="Night Mode" class="navbutton left" onclick="toggleNightMode(this)"><i class="material-icons">invert_colors</i></p>
-        <p id="readbutton" title="Reading Mode" class="navbutton left" onclick="toggleReadMode(this)"><i class="material-icons">chrome_reader_mode</i></p>
-        <p id="spellbutton" title="Spell Check" class="navbutton left selected" onclick="toggleSpellCheck(this)"><i class="material-icons">spellcheck</i></p>
+        <p id="readbutton" title="只显示渲染" class="navbutton left" onclick="toggleReadMode(this)"><i class="material-icons">chrome_reader_mode</i></p>
+        <p id="spellbutton" title="拼写检查" class="navbutton left selected" onclick="toggleSpellCheck(this)"><i class="material-icons">spellcheck</i></p>
         <p id="newbutton" class="navbutton left hidden" onclick="clearEditor()">Clear</p>
         <p id="sharebutton" class="navbutton left selected hidden">Share</p>
       </div>
